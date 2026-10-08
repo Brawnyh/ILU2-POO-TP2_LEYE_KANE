@@ -21,15 +21,16 @@ public class ControlLibererEtal {
 	 * 		[3] : quantité de produit à vendre au début du marché
 	 * 		[4] : quantité de produit vendu
 	 */
-	public String[] prendreEtal(String nomVendeur) {
-		
-		return Etal.etatEtal();
+
+	Boolean isVendeur(String nomVendeur) {
+		Etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
+		return (Etal!=null);
 	}
-	
 	
 	public String[] libererEtal(String nomVendeur) {
 		//TODO a completer
-		if (Etal.getVendeur().toString() == nomVendeur) {
+		
+		if (Etal.getVendeur().toString().equals(nomVendeur)) {
 			Etal.libererEtal();
 			
 		}
