@@ -16,4 +16,9 @@ public class ControlAcheterProduit {
 	}
 
 	//TODO a completer
+	public void acheterProduit(String nomClient) {
+		if (controlVerifierIdentite.verifierIdentite(nomClient)) {
+			controlTrouverEtalVendeur.trouverEtalVendeur(nomClient);
+		}
+	}
 }
